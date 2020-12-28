@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>bulma page</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+
+  <nav class="navbar has-shadow is-white">
+      <div class="navbar-brand">
+          <a href="#" class="nav-item">
+              <img class="px-1 my-4 mx-4" src="images/coffee.gif" alt="" style="width: 40%;">
+          </a>
+          <a href="#" class="navbar-burger" id="toggle-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+      </div>
+      <div class="navbar-menu py-3" id="nav-links">
+        <div class="navbar-end">
+          <a href="#" class="navbar-item" style="border-right: 0.5px solid rgb(71, 71, 71);">My Account<span class="is-small ml-1"><i class="fas fa-user-circle"></i></span></a>
+          <a href="#" class="navbar-item">Shoping Cart<span class="is-small ml-1"><i class="fas fa-cart-plus"></i><strong><sup class="has-text-danger">(0)</sup></strong></span></a>
+        </div>
+      </div>
+  </nav>
+
+  <!-- breakcrumbs -->
+  <div class="section pt-4 pb-0">
+    <nav class="breadcrumb has-arrow-separator">
+      <ul class="container">
+        <li>
+          <a href="#join-us" class="has-text-grey">  
+          <span class="icon is-small">
+          <i class="fas fa-home" aria-hidden="true"></i>
+          </span> 
+          <span id="breadcrum-text">Join us</span>
+        </a>
+        </li>
+        <li>
+          <a href="#contact-us" class="has-text-grey">  
+          <span class="icon is-small">
+          <i class="fas fa-mobile" aria-hidden="true"></i>
+          </span> 
+          <span id="breadcrum-text">Contact us</span>
+        </a>
+        </li>
+        <li>
+          <a href="#shop" class="has-text-grey" id="breadcrum-text">
+          <span class="icon is-small">
+            <i class="fas fa-store" aria-hidden="true"  id="breadcrum-icon"></i>
+            </span> 
+          <span id="breadcrum-text">Shop</span> 
+        </a>
+      </li>
+        <li class="is-active" id="breadcrum-text">
+          <a href="#special-product">
+          <span class="icon is-small">
+            <i class="fas fa-coffee" aria-hidden="true" id="breadcrum-icon"></i>
+            </span> 
+          <span id="breadcrum-text">Special Product</span>
+        </a>
+      </li>
+      </ul>
+    </nav>
+  </div>
+  <!-- product section -->
+  <div data-spy="scroll" data-target="#list-example" data-offset="0" class="scrollspy">
+  <section class="section mb-6" id="special-product">
+    <div class="container">
+      <div class="columns is-vcentered is-multiline">
+        <div class="column is-6-tablet is-3-desktop">
+          <h1 class="is-size-3-mobile is-size-1-desktop title">Coffee Bean</h1>
+          <h2 class="is-size-4-mobile is-size-4-desktop subtitle">Arabica <small>(Coffea arabica)</small></h2><hr>
+          <p>You’re probably already familiar with this commonly produced coffee bean; it accounts for over 60% of the world’s coffee production. Arabica beans are grown at high altitudes, in areas that receive steady rainfall and have a plentiful amount of shade.</p>
+        </div>
+        <div class="column is-6-tablet is-5-desktop">
+         <img class="px-6" src="images/coffeeImg.jpg" alt="Arabica (Coffea arabica)">
+        </div>
+        <div class="column is-12-tablet is-4-desktop">
+          <div class="is-size-4 mb-4 is-hidden" id="price1"><sup>$</sup> 10.45</div>
+          <div class="is-size-4 mb-4 is-hidden" id="price2"><sup>$</sup> 15.99</div>
+          <p class="mb-4">Arabica (Coffea arabica), is our special and most premimum quality product. </p>
+          <form>
+            <div class="control mb-6">
+              <div class="select is-primary">
+                <select id="select">
+                  <option value="default" selected>Select your pack</option>
+                  <option value="250">250g</option>
+                  <option value="500">500g</option>
+                </select>
+              </div>
+            </div>
+          </form>
+          <button class="button is-primary is-outlined">Book now</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- tabs & message -->
+  <section class="section mt-6 mb-6 has-background-white-bis">
+    <div class="container">
+      <div class="columns is-8 is-variable">
+        <div class="column is-7-desktop">
+          <div class="tabs is-boxed">
+            <ul>
+              <li class="is-active" data-target="product-details">
+                <a>Product Details</a>
+              </li>
+              <li data-target="delivery-info">
+                <a>Delivery information</a>
+              </li>
+            </ul>
+          </div>
+          <div class="px-2" id="tab-content">
+            <div id="product-details">
+              <h3 class="is-size-5 title">Product Details</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam sapiente voluptatem earum modi veniam vero quo blanditiis ab cumque voluptatum.</p>
+            </div>
+            <div id="delivery-info" class="is-hidden">
+              <h3 class="is-size-5 title">Delivery Information</h3>
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias, magni consequatur? Ullam, earum nemo? Ipsam cumque debitis mollitia deleniti aspernatur officia laborum nobis quibusdam optio!</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="column is-5-tablet-desktop" id="join-us">
+          <div class="message is-primary">
+            <div class="message-header">
+              <p>Earn points with the Coffee Club</p>
+            </div>
+            <div class="message-body">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus architecto, quam blanditiis eligendi tempore vitae ad ratione perspiciatis consequuntur doloremque facere molestiae autem! Obcaecati, voluptatem quas libero, fuga, numquam iusto fugit ab vel mollitia reprehenderit doloremque. Earum corporis libero enim ab beatae, exercitationem sequi doloribus magni in molestias aperiam rerum.</p>
+             <div class="has-text-centered">
+              <button class="button is-info is-outlined my-3 " id="signup-btn">Sign Up</button>
+             </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- card -->
+  <section class="section mt-6 mb-6" id="shop">
+     <div class="container">
+       <div class="title has-text-centered is-size-4">Related Products</div>
+       <div class="container px-6">
+        <hr>
+       </div> 
+     </div>
+     <div class="columns mt-5 is-8 is-variabe is-multiline is-centered">
+       <div class="column is-6-tablet is-3-desktop">
+         <div class="card">
+           <div class="crad-image has-text-cenetered px-6">
+             <img class="px-5 mt-3" src="images/p1.jpg" alt="Robusta (Coffea caniphora)" style="height: 110px;">
+             <div>
+               <div class="card-content">
+                 <p><sup>$</sup>15.99</p>
+                 <p class="title is-size-5">
+                  Robusta
+                 </p>
+               </div>
+               <footer class="card-footer">
+                 <p class="card-footer-item">
+                   <a onclick="viewDetailsModalShow1()" class="has-text-grey">View Details</a>
+                 </p>
+               </footer>
+             </div>
+           </div>
+         </div>
+       </div>
+       <div class="column is-6-tablet is-3-desktop">
+        <div class="card">
+          <div class="crad-image has-text-cenetered px-6">
+            <img class="px-5 mt-3" src="images/p2.jpg" alt="Excelsa" style="height: 110px;">
+            <div>
+              <div class="card-content">
+                <p><sup>$</sup>15.99</p>
+                <p class="title is-size-5">
+                 Excelsa
+                </p>
+              </div>
+              <footer class="card-footer">
+                <p class="card-footer-item">
+                  <a onclick="viewDetailsModalShow2()" class="has-text-grey">View Details</a>
+                </p>
+              </footer>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="column is-6-tablet is-3-desktop">
+        <div class="card">
+          <div class="crad-image has-text-cenetered px-6">
+            <img class="px-5 mt-3" src="images/p3.jpg" alt="Robusta Liberica" style="height: 110px;">
+            <div>
+              <div class="card-content">
+                <p><sup>$</sup>11.99</p>
+                <p class="title is-size-5">
+                Liberica
+                </p>
+              </div>
+              <footer class="card-footer">
+                <p class="card-footer-item">
+                  <a onclick="viewDetailsModalShow3()" class="has-text-grey">View Details</a>
+                </p>
+              </footer>
+            </div>
+          </div>
+        </div>
+      </div>
+     </div>
+  </section>
+  <!-- modal -->
+  <div class="modal" id="modal"> 
+    <div class="modal-background" id="modal-background"></div>
+      <div class="modal-content has-background-white px-5 py-5">
+        <h3 class="title mb6">Join the Club</h3>
+        <form id="signup-form">
+          <!-- username -->
+          <div class="field">
+            <label class="label">Username</label>
+            <div class="control has-icons-left has-icons-right">
+              <input class="input" type="text" placeholder="Enter name" id="name">
+              <span class="icon is-small is-left">
+                <i class="fas fa-user"></i>
+              </span>
+              <span class="icon is-small is-right">
+                <i class="fas fa-exclamation-triangle is-hidden" id="wrong-icon" style="color: red;"></i>
+                <i class="fas fa-check is-hidden" id="correct-icon" style="color: green;"></i>
+              </span>
+            </div>
+            <p class="help is-danger is-hidden" id="empty-username">This field cannot be empty</p>
+            <p class="help is-success is-hidden" id="correct-username">This username is valid</p>
+          </div>
+          <!-- Email -->
+          <div class="field">
+            <label class="label">Email</label>
+            <div class="control has-icons-left has-icons-right">
+              <input class="input" type="email" placeholder="Eg - James@gmail.com" id="email">
+              <span class="icon is-small is-left">
+                <i class="fas fa-envelope"></i>
+              </span>
+              <span class="icon is-small is-right">
+                <i class="fas fa-exclamation-triangle is-hidden" id="wrong-icon-email" style="color: red;"></i>
+                <i class="fas fa-check is-hidden" id="correct-icon-email" style="color: green;"></i>
+              </span>
+            </div>
+            <p class="help is-danger is-hidden" id="wrong-email">This email is invalid</p>
+            <p class="help is-danger is-hidden" id="empty-email">This field cannot be empty</p>
+            <p class="help is-success is-hidden" id="correct-email">This email is valid</p>
+          </div>
+          <!-- check box -->
+          <label class="checkbox">
+            <input type="checkbox" id="terms">
+            I agree to the <a href="#">terms and conditions</a>
+          </label>
+          <!-- button -->
+          <div class="has-text-centered">
+              <button class="button is-success mt-3" id="submit-btn">
+                Sign Up
+              </button>
+          </div>
+        </form>
+      </div>
+  </div>
+  <!-- cards modal -->
+<div class="modal" id="view-modal1">
+  <div class="modal-background" onclick="viewDetailsModalHide1()"></div>
+  <div class="modal-card">
+    <header class="modal-card-head">
+      <p class="modal-card-title">Robusta</p>
+      <button class="delete" aria-label="close" onclick="viewDetailsModalHide1()"></button>
+    </header>
+    <section class="modal-card-body">
+     <div class="content">
+      <h1>All about Robusta</h1>
+      <blockquote>Lorem ipsum, dolor sit amet consectetur adipisicing elit. At, quis mollitia! Ipsum alias autem ab possimus expedita laudantium aut accusamus?</blockquote>
+       <div class="columns">
+         <div class="column">
+          <p class="image">
+            <img src="images/p1.jpg" alt="">
+          </p>
+         </div>
+         <div class="column">
+           <h3>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla, rem.</h3>
+           <blockquote class="has-background-danger-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, voluptates consequuntur. Architecto odio aut consequuntur.</blockquote>
+         </div>
+       </div>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto hic quo dicta qui eaque numquam pariatur at sequi sint, provident tempora doloribus laboriosam, in magnam corrupti sed perferendis deserunt reiciendis eum, enim repudiandae sapiente maiores non. Alias, ratione dolore sed delectus similique ullam obcaecati expedita adipisci asperiores officiis, est ut, minima ex maiores eaque. Qui nobis, accusamus doloribus quisquam architecto voluptatem, aliquid maxime minima natus alias odio neque aliquam necessitatibus exercitationem repellat expedita ratione ea at deserunt! Minus illo aut ex quae perferendis obcaecati, quis suscipit corrupti eveniet, at, quas autem fugit cupiditate enim eligendi ducimus quos. Nulla, maxime consectetur?</p>
+     </div>
+    </section>
+    <footer class="modal-card-foot">
+      <div class="has-text-centered">
+        <button class="button is-primary">Order Now</button>
+      </div>
+    </footer>
+  </div>
+</div>
+<div class="modal" id="view-modal2">
+  <div class="modal-background" onclick="viewDetailsModalHide2()"></div>
+  <div class="modal-card">
+    <header class="modal-card-head">
+      <p class="modal-card-title">Excelsa</p>
+      <button class="delete" aria-label="close" onclick="viewDetailsModalHide2()"></button>
+    </header>
+    <section class="modal-card-body">
+     <div class="content">
+      <h1>All about Excelsa</h1>
+      <blockquote>Lorem ipsum, dolor sit amet consectetur adipisicing elit. At, quis mollitia! Ipsum alias autem ab possimus expedita laudantium aut accusamus?</blockquote>
+      <div class="columns">
+        <div class="column">
+         <p class="image">
+           <img src="images/p2.jpg" alt="">
+         </p>
+        </div>
+        <div class="column">
+          <h3>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla, rem.</h3>
+          <blockquote class="has-background-danger-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, voluptates consequuntur. Architecto odio aut consequuntur.</blockquote>
+        </div>
+      </div>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto hic quo dicta qui eaque numquam pariatur at sequi sint, provident tempora doloribus laboriosam, in magnam corrupti sed perferendis deserunt reiciendis eum, enim repudiandae sapiente maiores non. Alias, ratione dolore sed delectus similique ullam obcaecati expedita adipisci asperiores officiis, est ut, minima ex maiores eaque. Qui nobis, accusamus doloribus quisquam architecto voluptatem, aliquid maxime minima natus alias odio neque aliquam necessitatibus exercitationem repellat expedita ratione ea at deserunt! Minus illo aut ex quae perferendis obcaecati, quis suscipit corrupti eveniet, at, quas autem fugit cupiditate enim eligendi ducimus quos. Nulla, maxime consectetur?</p>
+     </div>
+    </section>
+    <footer class="modal-card-foot">
+      <div class="has-text-centered">
+        <button class="button is-primary">Order Now</button>
+      </div>
+    </footer>
+  </div>
+</div>
+<div class="modal" id="view-modal3">
+  <div class="modal-background" onclick="viewDetailsModalHide3()"></div>
+  <div class="modal-card">
+    <header class="modal-card-head">
+      <p class="modal-card-title">Liberica</p>
+      <button class="delete" aria-label="close" onclick="viewDetailsModalHide3()"></button>
+    </header>
+    <section class="modal-card-body">
+     <div class="content">
+      <h1>All about Liberica</h1>
+      <blockquote>Lorem ipsum, dolor sit amet consectetur adipisicing elit. At, quis mollitia! Ipsum alias autem ab possimus expedita laudantium aut accusamus?</blockquote>
+      <div class="columns">
+        <div class="column">
+         <p class="image">
+           <img src="images/p3.jpg" alt="">
+         </p>
+        </div>
+        <div class="column">
+          <h3>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla, rem.</h3>
+          <blockquote class="has-background-danger-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, voluptates consequuntur. Architecto odio aut consequuntur.</blockquote>
+        </div>
+      </div>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto hic quo dicta qui eaque numquam pariatur at sequi sint, provident tempora doloribus laboriosam, in magnam corrupti sed perferendis deserunt reiciendis eum, enim repudiandae sapiente maiores non. Alias, ratione dolore sed delectus similique ullam obcaecati expedita adipisci asperiores officiis, est ut, minima ex maiores eaque. Qui nobis, accusamus doloribus quisquam architecto voluptatem, aliquid maxime minima natus alias odio neque aliquam necessitatibus exercitationem repellat expedita ratione ea at deserunt! Minus illo aut ex quae perferendis obcaecati, quis suscipit corrupti eveniet, at, quas autem fugit cupiditate enim eligendi ducimus quos. Nulla, maxime consectetur?</p>
+     </div>
+    </section>
+    <footer class="modal-card-foot">
+      <div class="has-text-centered">
+        <button class="button is-primary">Order Now</button>
+      </div>
+    </footer>
+  </div>
+</div>
+  <!-- footer -->
+  <style>
+  #instagram, 
+  #facebook,
+  #twitter,
+  #google-plus{
+    transition: all 1s ease;
+  }
+
+  #instagram:hover, 
+  #facebook:hover, 
+  #twitter:hover, 
+  #google-plus:hover{
+    transform: scale(1.5);
+  }
+  </style>
+  <footer class="footer mt-6" id="contact-us">
+    <div class="content has-text-centered">
+      <p><sup><strong>©</strong></sup> Copyright 2020</p>
+      <p>Wanna reach out to us?</p>
+          <img id="instagram" src="images/instagram.png" alt="instagram" style="width: 2%; cursor: pointer;">
+          <img class="ml-3" id="facebook" src="images/facebook.png" alt="facebook" style="width: 2%; cursor: pointer;">
+          <img class="ml-3" id="twitter" src="images/twitter.png" alt="twitter" style="width: 2%; cursor: pointer;">
+          <img class="ml-3" id="google-plus" src="images/google-plus.png" alt="google-plus" style="width: 2.5%; cursor: pointer;">
+    </div>
+  </footer>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
